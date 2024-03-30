@@ -4,7 +4,7 @@ import Focus from '../components/Focus';
 import CharacterPoints from '../components/CharacterPoints';
 import React from 'react';
 import GroceryApp from '../components/GroceryApp';
-import {items, links, products} from '../data';
+import {items, links, list, products} from '../data';
 import ImageGallery from '../components/ImageGallery';
 import ListReorder from '../components/ListReorder';
 import TodoList from '../components/ToDoList';
@@ -24,7 +24,7 @@ const routes = [{
 }, {
   text: 'Image Gallery', to: '/image-gallery', component: () => <ImageGallery links={links}/>,
 }, {
-  text: 'List Reorder', to: '/list-reorder', component: () => <ListReorder links={links}/>,
+  text: 'List Reorder', to: '/list-reorder', component: () => <ListReorder items={list}/>,
 }, {
   text: 'Todo List',
   to: '/todo-list',
