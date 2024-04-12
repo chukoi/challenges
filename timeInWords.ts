@@ -82,7 +82,7 @@ function timeInWords(hour: number, minutes: number): string {
   }
 
   // first 9 minutes are not plural
-  if (minutes < 10) {
+  if (minutes === 1) {
     arr[1] = "minute";
   }
 
