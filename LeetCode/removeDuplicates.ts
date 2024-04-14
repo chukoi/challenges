@@ -1,5 +1,5 @@
 const removeDuplicates = function (s: string): string {
-  let stack = [];
+  let stack: string[] = [];
 
   for (const char of s) {
     stack[stack.length - 1] === char ? stack.pop() : stack.push(char);
