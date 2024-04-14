@@ -11,7 +11,7 @@ export default function Clock(): React.ReactElement<IProps> {
   const [time, setTime] = useState<string>(currentTime());
 
   useEffect(() => {
-    const intervalId = setInterval(() => setTime(currentTime), 1000);
+    const intervalId = setInterval(() => setTime(currentTime()), 1000);
 
     return () => clearInterval(intervalId);
   }, []);
