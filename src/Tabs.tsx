@@ -5,7 +5,6 @@ interface IProps {}
 export default function Tabs(): React.ReactElement<IProps> {
   const [activeTab, setActiveTab] = useState("html");
   const onTabChange = (e: any) => {
-    console.log("e", e);
     setActiveTab(e.target.id);
   };
 

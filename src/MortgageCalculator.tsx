@@ -1,5 +1,5 @@
 import "./styles.css";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 
 interface IProps {}
 
@@ -11,7 +11,7 @@ export default function MortgageCalculator(): React.ReactElement<IProps> {
   const [totalPayment, setTotalPayment] = useState("");
   const [totalInterest, setTotalInterest] = useState("");
 
-  const calculatePayment = () => {
+  const calculatePayment = useCallback(() => {
     const currencyFormatter = new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",
@@ -25,7 +25,7 @@ export default function MortgageCalculator(): React.ReactElement<IProps> {
     setTotalMonthlyPayment(currencyFormatter.format(monthlyPayment));
     setTotalPayment(currencyFormatter.format(totalPayment));
     setTotalInterest(currencyFormatter.format(totalPayment - amount));
-  };
+  }, [amount, rate, term]);
 
   return (
     <>
