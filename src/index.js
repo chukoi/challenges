@@ -6,6 +6,8 @@ import ContactForm from "./ContactForm";
 import HolyGrail from "./HolyGrail";
 import Tabs from "./Tabs";
 import MortgageCalculator from "./MortgageCalculator";
+import TrafficLight from "./TrafficLight";
+import Clock from "./Clock";
 
 const root = createRoot(document.getElementById("root"));
 root.render(
@@ -15,5 +17,7 @@ root.render(
     <MortgageCalculator />
     <HolyGrail />
     <Tabs />
+    <TrafficLight />
+    <Clock />
   </StrictMode>
 );
