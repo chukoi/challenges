@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-import "./styles.css";
-
 interface IProps {}
 
 // This is a warm-up question to help you

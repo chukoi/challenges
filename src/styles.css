@@ -9,6 +9,14 @@ body {
     box-sizing: border-box;
 }
 
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+}
+
 header,
 nav,
 main,
@@ -16,44 +24,4 @@ aside,
 footer {
     padding: 12px;
     text-align: center;
-}
-
-header {
-    background-color: tomato;
-}
-
-nav {
-    background-color: coral;
-}
-
-main {
-    background-color: moccasin;
-}
-
-aside {
-    background-color: sandybrown;
-}
-
-footer {
-    background-color: slategray;
-}
-
-.holygrail-body {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.holygrail-container {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-}
-
-.holygrail-container > * {
-    flex: 1;
-}
-
-.active-tab {
-    border-color: blue;
 }

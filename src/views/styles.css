@@ -1,0 +1,11 @@
+nav, .Challenge {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.backButton {
+  margin-bottom: 10px;
+}

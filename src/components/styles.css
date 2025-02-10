@@ -1,0 +1,39 @@
+.holygrail-body header {
+    background-color: tomato;
+}
+
+.holygrail-body nav {
+    background-color: coral;
+}
+
+.holygrail-body main {
+    background-color: moccasin;
+}
+
+.holygrail-body aside {
+    background-color: sandybrown;
+}
+
+.holygrail-body footer {
+    background-color: slategray;
+}
+
+.holygrail-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.holygrail-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.holygrail-container > * {
+    flex: 1;
+}
+
+.active-tab {
+    border-color: blue;
+}

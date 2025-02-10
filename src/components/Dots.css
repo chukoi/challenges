@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  position: initial;
+}
+
+.dot {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background: red;
+  position: absolute;
+}
