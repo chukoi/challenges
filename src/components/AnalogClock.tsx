@@ -19,7 +19,7 @@ const Hand = ({ className, rotation }: HandProps) => {
 function AnalogClock() {
   const { hours, minutes, seconds } = useTime();
 
-  const hourRotation = hours / 24;
+  const hourRotation = ((hours % 12) / 12) * 360;
   const minuteRotation = (minutes / 60) * 360;
   const secondRotation = (seconds / 60) * 360;
 

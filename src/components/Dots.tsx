@@ -16,6 +16,7 @@ function Dots() {
   const [removedDots, setRemovedDots] = useState<Dot[]>([]);
 
   const addDot = (e: React.MouseEvent<HTMLInputElement>) => {
+    console.log("e", e);
     const { clientX, clientY } = e;
     setDots((prevDots) => [...prevDots, { x: clientX, y: clientY }]);
     // new dot added so redo set reset as this is a new sequence
@@ -53,7 +54,7 @@ function Dots() {
         <button onClick={undoDot}>undo</button>
         <button onClick={redoDot}>redo</button>
       </div>
-      <div className="wrapper" onClick={addDot}>
+      <div className="dots-wrapper" onClick={addDot}>
         {dots.map((d) => (
           <Dot x={d.x} y={d.y} key={`${d.x}-${d.y}`} />
         ))}

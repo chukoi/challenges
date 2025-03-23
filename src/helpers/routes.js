@@ -9,6 +9,9 @@ import Clock from "../components/Clock";
 import CheckedItems from "../components/CheckedItems";
 import AnalogClock from "../components/AnalogClock";
 import Dots from "../components/Dots";
+import ToDo from "../components/Todo";
+import GreenLightRedLight from "../components/GreenLightRedLight";
+import Timer from "../components/Timer";
 
 const routes = [
   {
@@ -60,6 +63,21 @@ const routes = [
     text: "Dots",
     to: "/dots",
     component: () => <Dots />,
+  },
+  {
+    text: "To Do",
+    to: "/to-do",
+    component: () => <ToDo />,
+  },
+  {
+    text: "Green Light Red Light",
+    to: "/green-light-red-light",
+    component: () => <GreenLightRedLight />,
+  },
+  {
+    text: "Timer",
+    to: "/timer",
+    component: () => <Timer />,
   },
 ];
 
