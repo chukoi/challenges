@@ -1,4 +1,4 @@
-function startTimer(callback, interval) {
+function startTimer(callback: (...args: any) => boolean, interval: number) {
   var count = 0;
   var id = setInterval(function () {
     count++;
@@ -8,7 +8,7 @@ function startTimer(callback, interval) {
   }, interval);
 }
 
-function callback(counter) {
+function callback(counter: number) {
   console.log(counter);
   return counter < 5;
 }

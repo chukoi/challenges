@@ -1,4 +1,4 @@
-function numbersToLetters(stringOfNumbers) {
+function numbersToLetters(stringOfNumbers: string) {
   // Your code here
   let str = "";
   const arrs = stringOfNumbers.split("+");

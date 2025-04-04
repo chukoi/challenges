@@ -1,4 +1,4 @@
-function formatDate(userDate) {
+function formatDate(userDate: string) {
   // format from M/D/YYYY to YYYYMMDD
   const date = userDate.split("/");
   const year = date[2];

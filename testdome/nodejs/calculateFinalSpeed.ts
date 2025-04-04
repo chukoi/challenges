@@ -1,4 +1,4 @@
-function calculateFinalSpeed(initialSpeed, inclinations) {
+function calculateFinalSpeed(initialSpeed: number, inclinations: number[]) {
   let speed = initialSpeed;
   inclinations.forEach((inclination) => {
     speed -= inclination;
