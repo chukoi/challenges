@@ -1,16 +1,8 @@
-class ListNode {
-  val: number;
-  next: ListNode | null;
-
-  constructor(val?: number, next?: ListNode | null) {
-    this.val = val === undefined ? 0 : val;
-    this.next = next === undefined ? null : next;
-  }
-}
+import { ListNode } from "./ListNode";
 
 function addTwoNumbers(
   l1: ListNode | null,
-  l2: ListNode | null,
+  l2: ListNode | null
 ): ListNode | null {
   let sum = 0;
   let carry = 0;
@@ -47,8 +39,8 @@ console.log(
   "Test 1",
   addTwoNumbers(
     new ListNode(2, new ListNode(4, new ListNode(3))),
-    new ListNode(5, new ListNode(6, new ListNode(4))),
-  ),
+    new ListNode(5, new ListNode(6, new ListNode(4)))
+  )
 );
 console.log("Test 2", addTwoNumbers(new ListNode(0), new ListNode(0)));
 console.log(
@@ -60,10 +52,10 @@ console.log(
         9,
         new ListNode(
           9,
-          new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9)))),
-        ),
-      ),
+          new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9))))
+        )
+      )
     ),
-    new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9)))),
-  ),
+    new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9))))
+  )
 );
