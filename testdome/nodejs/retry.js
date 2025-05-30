@@ -1,15 +1,16 @@
 async function retryRequest(promiseFunc, nrOfRetries) {
   return new Promise((res, rej) => {
     const promise = promiseFunc();
-    promise.then(result => {
-      // console.log("results", result);
-      res(result);
-    }).catch(error => {
-      rej(false);
-      if (nrOfRetries > 0) {
-        retryRequest(promiseFunc, nrOfRetries - 1);
-      }
-    });
+    promise
+      .then((result) => {
+        res(result);
+      })
+      .catch((error) => {
+        rej(false);
+        if (nrOfRetries > 0) {
+          retryRequest(promiseFunc, nrOfRetries - 1);
+        }
+      });
   });
 }
 
@@ -21,16 +22,17 @@ function getUserInfo() {
     if (attempts < failedAttempts) {
       // hasFailed = true;
       attempts++;
-      reject('Exception!');
+      reject("Exception!");
     } else {
-      resolve('Fetched user!');
+      resolve("Fetched user!");
     }
   });
 }
 
 let promise = retryRequest(getUserInfo, 3);
 if (promise) {
-  promise.then((result) => console.log(result))
-    .catch((error) => console.log('Error!'));
+  promise
+    .then((result) => console.log(result))
+    .catch((error) => console.log("Error!"));
 }
 module.exports.retryRequest = retryRequest;
