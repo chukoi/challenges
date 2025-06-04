@@ -13,7 +13,7 @@ function setupStreams(
     idx++;
     dataOutputStream.write(obj);
   });
-  dataInputStream.on("end", (data: any) => {
+  dataOutputStream.on("end", () => {
     callback();
   });
 }

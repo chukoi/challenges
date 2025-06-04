@@ -6,9 +6,10 @@ async function retryRequest(promiseFunc, nrOfRetries) {
         res(result);
       })
       .catch((error) => {
-        rej(false);
         if (nrOfRetries > 0) {
           retryRequest(promiseFunc, nrOfRetries - 1);
+        } else {
+          rej(false);
         }
       });
   });
