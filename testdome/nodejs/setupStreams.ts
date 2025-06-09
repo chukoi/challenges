@@ -10,8 +10,7 @@ function setupStreams(
   dataInputStream.on("data", (data: any) => {
     const obj = JSON.parse(data);
     obj.id = idx;
-    idx++;
-    dataOutputStream.write(obj);
+    dataOutputStream.write(obj, null, () => idx++);
   });
   dataOutputStream.on("end", () => {
     callback();
