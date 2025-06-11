@@ -1,6 +1,6 @@
 async function runSequentially(functions: any) {
   return new Promise(async (res, rej) => {
-    let results: number[] = [];
+    let results = [];
     for (let i = 0; i < functions.length; i++) {
       try {
         const result = await functions[i]();
